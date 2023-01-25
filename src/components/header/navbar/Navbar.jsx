@@ -1,4 +1,5 @@
 import React , {useState} from 'react'
+import Cart from './Cart';
 
 const Navbar = () => {
 
@@ -39,13 +40,14 @@ const Navbar = () => {
 
 
       <nav className={`Cabecera-nav ${menu ? 'isActive ' : ''}`}>
-          <ul className='Cabecera-ul'>
-            <li className="Cabecera-li"><a href="cualquiercosa" className="Cabecera-a">Item 1</a></li>
-            <li className="Cabecera-li"><a href="cualquiercosa" className="Cabecera-a">Item 2</a></li>
-            <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Item 3</a></li>
-            <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Item 4</a></li>
-            <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Item 5</a></li>
-          </ul>
+            <ul className='Cabecera-ul'>
+              <li className="Cabecera-li"><a href="cualquiercosa" className="Cabecera-a">Item 1</a></li>
+              <li className="Cabecera-li"><a href="cualquiercosa" className="Cabecera-a">Item 2</a></li>
+              <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Item 3</a></li>
+              <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Item 4</a></li>
+              <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Item 5</a></li>
+            </ul>
+            <Cart/>
       </nav>
     </>
   )
