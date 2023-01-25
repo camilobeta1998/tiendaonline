@@ -1,0 +1,116 @@
+.Cabecera{
+    background-color: black;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    .Cabecera-logo{
+        margin-left: 5px;
+        .Cabecera-img{
+            width: 4em;
+            height: 1.8em;
+        }
+    }
+
+    //------------------Navbar----------------------------
+    .Cabecera-button{
+        width: 3.5em;
+        height: 4em;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        display: none;
+        fill: white;
+        
+        //Media query del boton burger
+
+        @media only screen and (max-width: 960px){
+            display: flex;
+        }
+        
+        .burger-bar{
+            background-color: white;
+            width: 4em;
+            height: 0.5em;
+            margin: 6px 0px;
+            border-radius: 0.5em ;
+        }
+
+        //animaciones del menu tipo burger cuando clicked
+        .burger-bar.clicked:nth-child(1){
+            transform: rotate(45deg) translate(0.75em, 1.25em);
+            transition: ease-out 0.3s ;
+        
+        }
+
+        .burger-bar.clicked:nth-child(2){
+            transform: scale(0.1);
+            transition: ease-out 0.3s;
+        }
+
+        .burger-bar.clicked:nth-child(3){
+            transform: rotate(135deg) translate(-0.5em, 1em);
+            transition: ease-out 0.3s ;
+        }
+
+        //animaciones del menu tipo burger cuando se da unclicked
+
+        .burger-bar.unclicked{
+            transform: rotate(0) translate(0);
+            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+        }
+
+    }
+
+    .Cabecera-nav.isActive{
+        @media only screen and (max-width: 960px){
+            height: 50vh;
+            opacity: 1;
+        }
+
+    }
+
+    .Cabecera-nav{
+        //media query de la etiqueta nav
+
+        @media only screen and (max-width:960px){
+            width: 100vw;
+            height: 0;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            opacity: 0;
+            transition: all .3s;
+        }
+
+        .Cabecera-ul{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-end;
+            align-items: center;
+            color: white;
+
+            //media query para el ul de la cabecera
+
+            @media only screen and (max-width: 960px){
+                display: flex;
+                flex-direction: column;
+            }
+
+           .Cabecera-li{
+            margin: 0 .5em;
+
+            //media query de las etiquetas li de la cabecera-nav
+
+            @media only screen and (max-width: 960px){
+                margin: .5em 0;
+
+            }
+           } 
+        }
+    }
+}   

@@ -1,0 +1,54 @@
+import React , {useState} from 'react'
+
+const Navbar = () => {
+
+  //Para cambiar las clases de hamburguesas.
+  const [burgerClass, setBurgerClass] = useState('burger-bar unclicked');
+  const [isMenuClicked, setIsMenuClicked] = useState(false);
+
+  //Aquí ira el state para mostrar o no el menu de tipo burger
+
+  const [menu, setMenu] = useState(false);
+
+
+  //alternar cambio de menú de hamburguesas
+
+  const updateMenu = () => {
+    if(!isMenuClicked){
+      setBurgerClass('burger-bar clicked')
+      setIsMenuClicked(true)
+    } else{
+      setBurgerClass('burger-bar unclicked')
+      setIsMenuClicked(false)
+    }
+  }
+
+  //aqui sera la funcion para cambiar el estado del setMenu
+
+  const mostrarMenu = () =>{
+    setMenu(!menu)
+  }
+
+  return (
+    <>
+      <div className='Cabecera-button' onClick={updateMenu, mostrarMenu}>
+          <div className={burgerClass} onClick={updateMenu}></div>
+          <div className={burgerClass} onClick={updateMenu}></div>
+          <div className={burgerClass} onClick={updateMenu}></div>
+      </div>
+
+
+      <nav className={`Cabecera-nav ${menu ? 'isActive ' : ''}`}>
+          <ul className='Cabecera-ul'>
+            <li className="Cabecera-li"><a href="cualquiercosa" className="Cabecera-a">Item 1</a></li>
+            <li className="Cabecera-li"><a href="cualquiercosa" className="Cabecera-a">Item 2</a></li>
+            <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Item 3</a></li>
+            <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Item 4</a></li>
+            <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Item 5</a></li>
+          </ul>
+      </nav>
+    </>
+  )
+}
+
+export default Navbar
