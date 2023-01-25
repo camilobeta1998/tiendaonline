@@ -1,0 +1,10 @@
+----------------------------------------------------ESTADOS------------------------------------------------------------------------------
+
+los estados son como el ciclo de vida, son una forma de persistir la información. Es commo una memoria interna del propio componente.
+
+Importante -> Cada vez que haya un cambio de estado, cambio de prop o un evento que desencadene un cambio de estado o un cambio de prop, se
+volverá a renderizar el componente.
+
+-------------------------------------------USEEFFECT------------------------
+
+el useEffect sirve para ejecutar codigo luego del renderizado del return

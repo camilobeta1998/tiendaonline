@@ -1,0 +1,62 @@
+.Contador{
+    width: 16em;
+    height: 9em;
+    color: black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    .Contador-contenedor{
+        display: flex;
+        flex-flow: row nowrap;
+        height: 65px;
+        div{
+            width: 65px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0 .1px;
+            border: solid 0.1px #E6E6E6;
+        }
+        .Contador-restar{
+            cursor: pointer;
+            &:hover{
+                background-color: #717FE0;
+                transition: ease .3s;
+            }
+        }
+
+        .Contador-sumar{
+            cursor: pointer;
+            &:hover{
+                background-color: #717FE0;
+                transition: ease .3s;
+
+            }
+        }
+        .Contador-pantalla{
+            background-color: #f7f7f7;
+            
+        }
+    }
+
+    .Contador-agregar-al-carrito{
+        background-color: #717FE0;
+        color: white;
+        border-radius: 90px;
+        height: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15em;
+        position: relative;
+        left: 1.1em;
+        cursor: pointer;
+        &:hover{
+            background-color: #222222;
+            transition: ease .3s;
+
+        }
+    }
+}
