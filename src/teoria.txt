@@ -1,10 +1,113 @@
-----------------------------------------------------ESTADOS------------------------------------------------------------------------------
+----------------------------------------------------ESTADOS----------------------------------------------------------------------------------------------------------
 
 los estados son como el ciclo de vida, son una forma de persistir la información. Es commo una memoria interna del propio componente.
 
 Importante -> Cada vez que haya un cambio de estado, cambio de prop o un evento que desencadene un cambio de estado o un cambio de prop, se
 volverá a renderizar el componente.
 
--------------------------------------------USEEFFECT------------------------
+-------------------------------------------USEEFFECT-----------------------------------------------------------------------------------------------------------------
 
 el useEffect sirve para ejecutar codigo luego del renderizado del return
+
+
+¿Qué es un componente? Rta// Un componente es un elemento reutilizable.
+
+
+dentro de la carpeta src vamos a crear distintas carpetas que me ayudarán a ser mas organizados.
+
+ 1- La primera carpeta que habrá dentro de src será una llamada components.
+
+     - dentro de componets habrán las siguientes carpetas:
+
+        - pure : esta carpeta contendrá componentes puros, son sencillos que NO tengan demasiada logica ni mucha información .
+                    - dentro de pure vamos a crear una carpeta que se llama forms, que servirá para la creación de formularios.
+
+        - container : esta carpeta contiene los componentes que tiene una alta cantidad de lógica de programacición.
+
+        - hooks: Donde crearemos nuestros propios hooks, o lo relacionado con los mismos.
+
+        - routes: Estableceremos que ruta va con cual componente.
+
+        - pages : Aqui se contendran archivos javascript o jsx que rendericen una pagina.
+                - dentro de pages vamos a crear una carpeta que se llamara home, la cual contendra el home.
+                - dentro pages tambien crearemos una carperta llamada auth, que nos servira para autentificar, aqui estara la pagina de login y del cambio de contraseña.
+                - dentro de pages crearemos un 404, que es el mensaje de error, de cuando ha fallado algo.
+        
+        models: Aqui se creara datos y se especificaran los datos con los que vamos a trabajar.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Es buena practica tener un archivo fuera de todo, o sea al mismo nivel que el .gitignore que se llamará .editorconfig, basicamente es 
+un archivo que nos permite configurar como se va a desarrollar el identado, el tamaño de los espacios, etc en nuestro entorno de desarrollo. 
+Primero tengo que instlar la extension editorconfig.
+
+¿Qué son los Hooks en react?
+
+Los hooks son basicamente funciones los cuales sirven para especificar y trabajar con componentes funcionales. 
+
+iMPORTANtE cuando vamos a usar hooks debemos de importarlos de react.
+
+        1- useState() : 
+
+                const [nombreVariable, funcionParaCambiar] = useState(valorInicial)
+
+        2- useEffect() : este hook nos sirve para controlar los cambios en la vista, en lo que vemos en pantalla. Es importante saber que 
+        solo se puede tener un useEffect, ya que si tenemos mas de uno, solo se ejecutara el ultimo.
+
+                1- Primer caso del useEffect: Ejecutar siempre. Cada vez que haya un cambio en el estado del componente se ejecuta aquello
+                que esta dentro del useEffect.
+
+                        useEffect(()=>{
+                                console.log('cambio en el estado del componente')      
+                        })
+
+                2- Segundo caso del useEffect: Ejecutar solo en algunos casos, o sea, cuando haya un array de dependencias.
+
+        
+        3- useRef() : este hook nos sirve para identificar elementos dentro de la vista.
+
+        4- useContext() : El useContext sirve para usar datos de componentes que son nietos, bisnietos, tataranietos o inclusive que no 
+        tienen ningun parentezco entre si.
+
+                pasos para usar el usecontext() => 
+                        1- Crear el contexto: Para crear el contexto debemos importar desde 'react' el create context.
+
+                                ------------El componente principal---------------------------
+
+                                import {createContext} from 'react'
+                                import Parrafo from './Parrafo'
+                                export const contextoEjemplo = createContext();      =>  Aquí estamos creando el contexto el cual englobará a 
+                                                                                     toda mi aplicación.
+
+                                function App()  {
+                                        return(
+                                                <contextoEjemplo.Provider value={cualquierCosa}>       =>Aqui se ve como el contexto está encerrando a toda la App
+                                                        <div className='App'>                          Provider signifca que el contexto proveerá datos a todos
+                                                            <Parrafo/>                                 los componentes que esten encerrados por el contexto. Ademas,
+                                                                                                         este contexto tiene que iniciar con un value={}.
+                                                                                                        Todos los componentes que yo quiera que puedan acceder a información
+                                                        <div>                                            contenida en el contexto debe estar encerra por el context.provider                                      
+                                                <contextoEjemplo.Provider/>
+                                        )
+                                }
+
+                                export default App
+
+                                ------------------Componente Parrafo.jsx---------------------------
+                        2 - usar el contexto
+                                import {usecontext} from 'react'
+                                import {contextoEjemplo} from './App'    => aqui estoy trayendo el contexto.
+
+                                const Parrafo = () =>{
+                                        const numeroDesdeContexto = useContext(contextoEjemplo);   => Aquí estoy usando el contexto
+                                        return(
+                                                <>
+                                                        <div>Parrafo</div>
+                                                        <h1>Numero con contexto: {numeroDesdeContexto}</h1>
+                                                </>
+                                        )
+                                }
+                                export default Parrafo
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+¿Que es el ciclo de vida de un componente? ¿Cuando nacen y cuando mueren?

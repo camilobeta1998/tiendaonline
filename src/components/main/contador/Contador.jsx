@@ -22,8 +22,6 @@ const Contador = ({stock}) => {
     // }
 
 
-
-
   return (
     <div className='Contador'>
         <div className='Contador-contenedor'>

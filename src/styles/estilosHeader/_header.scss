@@ -21,7 +21,11 @@
         @media only screen and (max-width:960px){
             display: flex;
             position: relative;
-            left: 31.5%;
+            left: 28%;
+        }
+
+        @media only screen and (max-width:480px){
+            
         }
         .Cabecera-carrito{
             width: 1.5em;
@@ -61,6 +65,7 @@
         @media only screen and (max-width: 960px){
             display: flex;
         }
+
         
         .burger-bar{
             background-color: white;

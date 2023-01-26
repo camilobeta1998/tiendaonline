@@ -16,11 +16,12 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            margin: 0 .1px;
+         
             border: solid 0.1px #E6E6E6;
         }
         .Contador-restar{
             cursor: pointer;
+            border-radius: 4px;
             &:hover{
                 background-color: #717FE0;
                 transition: ease .3s;
@@ -29,6 +30,8 @@
 
         .Contador-sumar{
             cursor: pointer;
+            border-radius: 4px;
+
             &:hover{
                 background-color: #717FE0;
                 transition: ease .3s;

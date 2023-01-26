@@ -1,11 +1,13 @@
 import React from 'react'
 import ItemListContainer from './ItemListContainer'
-import Contador from './contador/Contador'
+import SectionUno from './SectionUno'
+// import Contador from './contador/Contador'
 
 const Main = () => {
   return (
     <main className='Main'>
-        <Contador stock={10}/>
+        {/* <Contador stock={10}/> */}
+        <SectionUno/>
         <ItemListContainer/>
     </main>
   )
