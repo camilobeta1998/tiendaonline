@@ -1,16 +1,34 @@
-import React , {useEffect} from 'react'
-
+import React , {useEffect , useState} from 'react'
+import { products } from '../../mock/products'
+import ItemList from './ItemList';
 const ItemListContainer = () => {
 
-    useEffect(() => {
-        console.log('Me renderizo')
-    });
+  //Creare un estado para guardar todos y cada uno de los productos, para despues hacer posteriormente un map 
+  const [items, setItems] = useState([])
 
-    console.log('Primer render')
+      useEffect(() => {
+          const getProducts = () =>{
+              return new Promise((res, rej)=>{
+                //Este setTimeOut sirve para simular el retardo que hay cuando se hace una llamada a servicios externos, o sea se tardara dos segundo
+                //en hacer la resolucion de la promesa.
+                setTimeout(()=>{
+                    res(products)
+                }, 2000)
+              })
+          }
+        
+          getProducts()
+            .then((res)=>{
+              setItems(res)
+            })
+            .catch(()=>{
+              console.log('error')
+            })
+      }, []);
 
   return (
     <div className='Container-itemList-Container'>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime consequatur vitae velit odit laborum veniam recusandae in veritatis commodi error nemo, rem cum architecto incidunt rerum neque laboriosam excepturi nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. In, reprehenderit sunt hic ullam iusto aperiam possimus molestiae. Tempora nostrum sequi aliquid fuga non reiciendis iusto, ab quas animi laudantium laborum?</p>
+          <ItemList items={items}/>
     </div>
   )
 }

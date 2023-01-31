@@ -110,4 +110,11 @@ iMPORTANtE cuando vamos a usar hooks debemos de importarlos de react.
                                 export default Parrafo
 
 -------------------------------------------------------------------------------------------------------------------------------------------
-¿Que es el ciclo de vida de un componente? ¿Cuando nacen y cuando mueren?
+
+Importante, nunca pero nunca meter dentro del useEffect un useState ya que podrias crear un bucle que si no esta controlado todos se saldria de control
+
+------------------------------------------------------PROMESAS---------------------------------------------------------------------------------------
+
+Una promesa es un objeto que nos permite representar y seguir el ciclo de vida de una tarea o operacion (función)
+
+        -Tiene dos estados posibles PENDING => (FULLFILLED || REJECTED)  

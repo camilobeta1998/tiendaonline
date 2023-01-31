@@ -11,9 +11,8 @@ const Navbar = () => {
 
   const [menu, setMenu] = useState(false);
 
-
   //alternar cambio de menú de hamburguesas
-
+  
   const updateMenu = () => {
     if(!isMenuClicked){
       setBurgerClass('burger-bar clicked')
@@ -29,10 +28,17 @@ const Navbar = () => {
   const mostrarMenu = () =>{
     setMenu(!menu)
   }
+  
+  //Funcion que engloba todas las funciones para dar vida al boton
+
+  const FuncionPadre = () =>{
+    mostrarMenu()
+    updateMenu()
+  }
 
   return (
     <>
-      <div className='Cabecera-button' onClick={updateMenu, mostrarMenu}>
+      <div className='Cabecera-button' onClick={FuncionPadre}>
           <div className={burgerClass} onClick={updateMenu}></div>
           <div className={burgerClass} onClick={updateMenu}></div>
           <div className={burgerClass} onClick={updateMenu}></div>
