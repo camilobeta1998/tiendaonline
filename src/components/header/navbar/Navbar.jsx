@@ -47,11 +47,11 @@ const Navbar = () => {
 
       <nav className={`Cabecera-nav ${menu ? 'isActive ' : ''}`}>
             <ul className='Cabecera-ul'>
-              <li className="Cabecera-li"><a href="cualquiercosa" className="Cabecera-a">Item 1</a></li>
-              <li className="Cabecera-li"><a href="cualquiercosa" className="Cabecera-a">Item 2</a></li>
-              <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Item 3</a></li>
-              <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Item 4</a></li>
-              <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Item 5</a></li>
+              <li className="Cabecera-li"><a href="cualquiercosa" className="Cabecera-a">Inicio</a></li>
+              <li className="Cabecera-li"><a href="cualquiercosa" className="Cabecera-a">Tienda</a></li>
+              <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Carrito</a></li>
+              <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Nosotros</a></li>
+              <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Sucursales</a></li>
             </ul>
             <Cart/>
       </nav>

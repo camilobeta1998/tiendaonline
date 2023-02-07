@@ -56,6 +56,35 @@ export const products = [
         category: 'Zapatillas',
         img: 'https://res.cloudinary.com/da3wbsyki/image/upload/v1675118002/ecommerce%20nike/42c89c03-78bd-4278-9273-e113b5899476_pwbfe7.webp',
         sexo: 'Hombre'
+    },
+    {
+        id : 7,
+        title: 'Air Jordan 1 Elevate Low SE',
+        price: 149.99,
+        stock: 10,
+        category: 'Zapatillas',
+        img: 'https://res.cloudinary.com/da3wbsyki/image/upload/v1675730204/ecommerce%20nike/c81d673c-6951-4c85-b34e-e1e8a618d54a_guz7bq.webp',
+        sexo: 'Mujer'
+    },
+    {
+        id : 8,
+        title: 'Nike Metcon 8 AMP',
+        price: 149.99,
+        stock: 10,
+        category: 'Zapatillas',
+        img: 'https://res.cloudinary.com/da3wbsyki/image/upload/v1675730220/ecommerce%20nike/a434379e-98ac-4b7a-bb31-5b179e9a010b_bovvxw.webp',
+        sexo: 'Mujer'
+    },
+    {
+        id : 9,
+        title: 'Nike Air Force 1 Low PLT',
+        price: 139.99,
+        stock: 10,
+        category: 'Zapatillas',
+        img: 'https://res.cloudinary.com/da3wbsyki/image/upload/v1675730224/ecommerce%20nike/7cb2a639-a346-4884-80c8-477f3c621932_nwnflz.webp',
+        sexo: 'Mujer'
+    },
+    
 
-    }
+
 ]
