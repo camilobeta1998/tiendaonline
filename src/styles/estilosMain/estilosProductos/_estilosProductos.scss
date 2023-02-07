@@ -1,0 +1,28 @@
+.Container-itemList-Container{
+    margin: 20px 0;
+    .Contenedor-productos{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        cursor: pointer;
+        .Container-itemlist-productos{
+            width: 25em;
+            height: 30.5em;
+            margin: 10px;
+            .Imagen-productos{
+                width: 100%;
+                height: 26em ;
+            }
+            .contenedor-descripcion-producto{
+                margin: 10px 0;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                .genero{
+                    color: gray;
+                }
+            }
+        }
+    }
+}
