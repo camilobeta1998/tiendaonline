@@ -1,5 +1,5 @@
 .SectionUno{
-    height: 100%;
+    height: 86vh;
     width: 100%;
     overflow: hidden;
     @media only screen and (max-width:960px){
@@ -9,11 +9,13 @@
         animation: cambio 20s infinite alternate linear ;
         display: flex;
         width: 400%;
+        height: 100%;
         li{
-            width: 100%;
+            width:100%;
+            height: 100%;
             list-style: none;
             img{
-                width: 100%;
+                width: 120%;
                 height: 100%;
             }
         }
