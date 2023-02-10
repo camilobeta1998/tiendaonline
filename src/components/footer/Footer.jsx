@@ -1,4 +1,5 @@
 import React from 'react'
+import Login from '../formulario/Login'
 
 const Footer = () => {
   return (
@@ -29,8 +30,7 @@ const Footer = () => {
             </div>
 
             <div className='formulario'>
-              <h4>SUSCRIBETE</h4>
-                
+                <Login/>
             </div>
         
         </div>
