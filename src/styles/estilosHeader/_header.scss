@@ -24,9 +24,6 @@
             left:30%;
         }
 
-        @media only screen and (max-width:480px){
-            
-        }
         .Cabecera-carrito{
             width: 1.5em;
             height: 1.5em;
@@ -105,20 +102,17 @@
     .Cabecera-nav.isActive{
         @media only screen and (max-width: 960px){
             height: 50vh;
-            opacity: 1;
-            position: relative;
-            left: 1px;
+            width: 100%;
+            opacity: 1;           
         }
 
     }
 
     .Cabecera-nav{
         //media query de la etiqueta nav
-        width: 24em;
+
         height: 3em;
         display: flex;
-        position: relative;
-        right: 30px;
 
 
         @media only screen and (max-width:960px){
@@ -174,6 +168,7 @@
             align-items: center;
             color: white;
             height: 100%;
+
 
             //media query para el ul de la cabecera
 
