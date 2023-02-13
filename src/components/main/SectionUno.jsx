@@ -12,7 +12,7 @@ const SectionUno = () => {
       if(count>3){
         setCount(1)
       }
-    } , 2000)
+    } , 4000)
     return () => {
       clearInterval(interval)
     };
