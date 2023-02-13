@@ -3,7 +3,9 @@ import React from 'react'
 const Item = ({producto}) => {
   return (
     <div className='Container-itemlist-productos'>
-        <img className='Imagen-productos' src={producto.img} alt="Imagen del producto"/>
+      <div className='contenedor-imagen'>
+          <img className='Imagen-productos' src={producto.img} alt="Imagen del producto"/>
+      </div>
         <div className='contenedor-descripcion-producto'>
             <div>
                 <h2>{producto.title}</h2>

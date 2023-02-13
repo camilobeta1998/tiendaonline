@@ -2,7 +2,19 @@
     height: 90vh;
     width: 100%;
     overflow: hidden;
-    border: solid 2px orange; 
+    transition: all 500ms ease;
+    @media only screen and (max-width:480px){
+        height: 40vh;
+    }
+
+    @media only screen and (max-width:960px){
+        height: 50vh;
+    }
+
+    img{
+        margin-bottom: 50%;
+    }
+   
 }
 
 

@@ -8,20 +8,20 @@ const SectionUno = () => {
 
   useEffect(() => {
     const interval = setInterval(()=>{
-      setCount(count + 1)
+      setCount(count + 1) 
       if(count>3){
         setCount(1)
       }
-    } , 4000)
+    } , 5000)
     return () => {
-      clearInterval(interval)
+      clearInterval(interval) 
     };
   }, [count]);
   
 
   return (
     <section className='SectionUno'>
-    <img alt='' src={imagenes(`./image${count}.jpg`)} id='image'/>
+      <img alt='' src={imagenes(`./image${count}.jpg`)} className='image'/>
     </section>
   )
 
