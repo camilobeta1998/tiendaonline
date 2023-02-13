@@ -4,6 +4,8 @@ import SectionUno from './SectionUno'
 // import Contador from './contador/Contador'
 
 const Main = () => {
+
+
   return (
     <main className='Main'>
         {/* <Contador stock={10}/> */}

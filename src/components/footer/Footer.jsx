@@ -23,9 +23,9 @@ const Footer = () => {
                 </div>
                 
                 <div className='iconos'>
-                    <a href="https://www.linkedin.com/in/camilo-betancur-1a2023246/" class="fa fa-linkedin"> </a>
-                    <a href="linkInstagram" class="fa fa-instagram"> </a>
-                    <a href="https://wa.me/573175499226" class="fa fa-whatsapp"> </a>
+                    <a href="https://www.linkedin.com/in/camilo-betancur-1a2023246/" className="fa fa-linkedin"> </a>
+                    <a href="linkInstagram" className="fa fa-instagram"> </a>
+                    <a href="https://wa.me/573175499226" className="fa fa-whatsapp"> </a>
                 </div>
             </div>
 

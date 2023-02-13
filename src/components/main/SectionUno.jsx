@@ -1,25 +1,33 @@
-import React from 'react'
+import React , {useState , useEffect}  from 'react'
+// import imagen1 from '../../images/image1.jpg'
 
 const SectionUno = () => {
+  const imagenes = require.context('../../images' , true);
+  
+  const [count, setCount] = useState(1)
+
+  useEffect(() => {
+    const interval = setInterval(()=>{
+      setCount(count + 1)
+      if(count>3){
+        setCount(1)
+      }
+    } , 2000)
+    return () => {
+      clearInterval(interval)
+    };
+  }, [count]);
+  
+
   return (
     <section className='SectionUno'>
-        <ul className='SectionUno-ul'>
-            <li className='SectionUno-li-uno'>
-                <img src="https://symmetrypublicrelations.com/wp-content/uploads/2021/04/Black-and-White-City-Blog-Banner.png" alt="banner nike uno" />
-            </li>
-            <li>
-                <img  src="https://i.pinimg.com/originals/ac/67/0f/ac670f31fd2e142d1bd94d55201af84f.jpg" alt="Banner nike dos" />
-            </li>
-            <li>
-                <img src="https://i.ytimg.com/vi/PulTaiTf6ak/maxresdefault.jpg" alt="Banner nike tres" />
-            </li>
-            <li>
-                <img src="https://i.ytimg.com/vi/TonNdlqz2uI/maxresdefault.jpg" alt="Banner nike cuatro" />
-            </li>
-
-        </ul>
+    <img alt='' src={imagenes(`./image${count}.jpg`)} id='image'/>
     </section>
   )
-}
+
+
+  }
+
+
 
 export default SectionUno
