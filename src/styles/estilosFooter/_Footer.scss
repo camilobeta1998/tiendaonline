@@ -1,9 +1,8 @@
-
-
-
 .footer{
     background-color: #333333;
     margin: 25px 0;
+    transition: all 500ms ease;
+    overflow: hidden;
     .Contenedor-footer-contactos{
         width: 100%;
         height: 80vh;
