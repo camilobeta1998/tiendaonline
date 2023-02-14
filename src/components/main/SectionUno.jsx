@@ -17,14 +17,12 @@ const SectionUno = () => {
     };
   }, [count]);
   
-
   return (
       <section className='SectionUno'>
         <img alt='Banner Nike' src={imagenes(`./image${count}.jpg`)} className='image'/>
       </section>
   )
 }
-
 
 
 export default SectionUno

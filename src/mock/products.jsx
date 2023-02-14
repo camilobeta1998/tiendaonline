@@ -6,7 +6,8 @@ export const products = [
         stock: 10,
         category: 'Zapatillas',
         img: 'https://res.cloudinary.com/da3wbsyki/image/upload/v1675117938/ecommerce%20nike/b7d9211c-26e7-431a-ac24-b0540fb3c00f_seqkxv.webp',
-        sexo: 'Hombre'
+        sexo: 'Hombre',
+        video: 'https://static.nike.com/a/videos/q_90,vc_vp9/5398e89d-a986-4fee-8faf-bb38df19dbb4/video.webm'
         
     },
     {

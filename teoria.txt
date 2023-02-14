@@ -118,3 +118,53 @@ Importante, nunca pero nunca meter dentro del useEffect un useState ya que podri
 Una promesa es un objeto que nos permite representar y seguir el ciclo de vida de una tarea o operacion (función)
 
         -Tiene dos estados posibles PENDING => (FULLFILLED || REJECTED)  
+
+        const GetProducts = () =>{
+                return new Promise((res,rej)=>{
+                        res(prod)
+                })
+        }
+
+----------------------------------------------CONSUMIENDOS APIS-----------------------------------------------------------------------------
+
+Modelo cliente servidor:  - el cliente es el que hace la consulta, programadores, usuarios. 
+                          - El servidor es el que responde
+
+                          cliente -----> servidor -------> base de datos // el cliente se comunica con el servidor y a su vez el 
+                                                           se comunica con la base de datos.
+
+                                                           luego la base de datos le responde al servidor y el servidor nos responde a 
+                                                           nosotros los clientes.
+
+        el servidor responde con codigos: - Todos los codigos que inicien con el numero 100 es porque es de informacion.
+
+                                         - Todos los codigos que sean con 200 es porque fue bien, fue aceptado, fue ok.
+
+                                         - Todos los codigos que sean con el numero 300 son de redireccion.
+
+                                         - Todos los codigos que inicien con el numero 400 es porque es de error, algo salio mal.
+
+
+        import React , {useEffect} from 'react';
+
+        const EjemploDeApi = () => {
+                
+                useEffect(()=>{
+                        fetch('http://fakestoreapi.com/products')   ----> El fetch es un objeto de tipo promise 
+                        .then((res)=>{
+                             console.log(res)                  => lo que esta dentro de estas llaves es porque salio todo bien.
+                        })
+                        .catch((error)=>{
+                             console.log('Hay un error ' , error)    => lo que este dentro de estas llaves es porque salio mal.
+                        })
+                } , [])
+
+                return(
+                        <div>Ejemplo de Api </div>
+                )
+        }
+
+        export default EjemploDeApi;
+
+
+
