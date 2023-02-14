@@ -1,5 +1,4 @@
 import React , {useState , useEffect}  from 'react'
-// import imagen1 from '../../images/image1.jpg'
 
 const SectionUno = () => {
   const imagenes = require.context('../../images' , true);
@@ -20,13 +19,11 @@ const SectionUno = () => {
   
 
   return (
-    <section className='SectionUno'>
-      <img alt='' src={imagenes(`./image${count}.jpg`)} className='image'/>
-    </section>
+      <section className='SectionUno'>
+        <img alt='Banner Nike' src={imagenes(`./image${count}.jpg`)} className='image'/>
+      </section>
   )
-
-
-  }
+}
 
 
 

@@ -84,7 +84,5 @@ export const products = [
         img: 'https://res.cloudinary.com/da3wbsyki/image/upload/v1675730224/ecommerce%20nike/7cb2a639-a346-4884-80c8-477f3c621932_nwnflz.webp',
         sexo: 'Mujer'
     },
-    
-
 
 ]
