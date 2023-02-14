@@ -34,6 +34,9 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @media only screen and (max-width:960px){
+            justify-content: flex-start;
+        }
         .informacion-detallada{
             margin: 0 32px;
             @media only screen and (max-width:960px){
