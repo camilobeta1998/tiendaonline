@@ -167,4 +167,56 @@ Modelo cliente servidor:  - el cliente es el que hace la consulta, programadores
         export default EjemploDeApi;
 
 
+------------------------------------------------------------------------RUTAS-----------------------------------------------------------------------------------------------------------
+
+React usa una libreria de rutas.
+
+React-router-dom :
+                  1- Instalación: Ya que react no viene con nada de rutas debemos instalarlas
+                  usando npm install react-router-dom
+
+                  2 - envolver con BrowserRouer toda mi aplicacion e importar BrowserRouter y Routes
+
+                        import {BrowserRouter} from 'react-router-dom'
+
+                                function App() {
+                                return (
+                                        <BrowserRouter>
+                                                <Header/>
+                                                <Main/>
+                                                <Footer/>
+                                        </BrowserRouter>
+                                );
+                                }
+
+                                export default App;
+                
+                  3- Despues por medio de Routes envuelvo todo lo que quiero que cambie por medio de las rutas del navegador y despues le doy una ruta especifica
+
+                                 import {BrowserRouter, Routes , Route} from 'react-router-dom'
+
+                                function App() {
+                                return (
+                                        <BrowserRouter>
+                                                <Header/>
+                                                <Routes> 
+                                                        <route path='/LaRutaQueQuiero' element={<Main/>}/>
+                                                </Routes>
+                                                <Footer/>
+                                        </BrowserRouter>
+                                );
+                                }
+
+                                export default App;
+
+                  4 - Normalmente las rutas se las da un <a> y por medio del href='Link' el problema es que al cambiar de link se me vuelve a renderizar todo el componente y no queremos
+                      eso ya que es poco eficiente, para solucionar esto traemos lo siguiente.
+
+                      import <Link> from 'react-router-dom'  ---> El link nos ayuda a prevenir ese refresh
+
+
+
+
+
+
 

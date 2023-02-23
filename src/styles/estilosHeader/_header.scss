@@ -132,6 +132,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            top: 20%;
                  
             @media only screen and (max-width:960px){
                 display: none;                
@@ -182,9 +184,14 @@
 
            .Cabecera-li{
             margin: 0 .5em;
+            .active{
+                border-bottom: solid 2px gray;
+            }
             &:hover{
                 color: gray;
             }
+
+
 
             //media query de las etiquetas li de la cabecera-nav
 

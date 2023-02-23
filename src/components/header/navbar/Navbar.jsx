@@ -1,5 +1,7 @@
 import React , {useState} from 'react'
 import Cart from './Cart';
+// import el link para evitar el refresh de la pagina 
+import { NavLink , Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -47,12 +49,14 @@ const Navbar = () => {
 
       <nav className={`Cabecera-nav ${menu ? 'isActive ' : ''}`}>
             <ul className='Cabecera-ul'>
-              <li className="Cabecera-li"><a href="cualquiercosa" className="Cabecera-a">Inicio</a></li>
-              <li className="Cabecera-li"><a href="cualquiercosa" className="Cabecera-a">Hombre</a></li>
-              <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Mujer</a></li>
-              <li className="Cabecera-li"><a href="cualquier cosa" className="Cabecera-a">Nosotros</a></li>
+              <li className="Cabecera-li"><NavLink to="/" className="/">Inicio</NavLink></li>
+              <li className="Cabecera-li"><NavLink to="/category/hombre" className="Cabecera-a">Hombre</NavLink></li>
+              <li className="Cabecera-li"><NavLink to="/category/mujer" className="Cabecera-a">Mujer</NavLink></li>
+              <li className="Cabecera-li"><NavLink to="/category/nosotros" className="Cabecera-a">Nosotros</NavLink></li>
             </ul>
-            <Cart/>
+            <Link to='/cart'>
+                <Cart/>
+            </Link>
       </nav>
     </>
   )
