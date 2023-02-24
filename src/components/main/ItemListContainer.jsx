@@ -38,23 +38,12 @@ const ItemListContainer = ({prop}) => {
             })
       }, [categoryName]);
 
-  
-  if(!prop){
-    return (
-      <div className='Container-itemList-Container'>
-            <ItemList items={items}/>
-      </div>
-    )
-  } else {
     return(
         <div className='Container-itemList-Container'>
-            <div className='contenedor-imagen'>
-                <img className='ImagenDeportistas' src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1824,c_limit/58aa50cb-efca-4835-b128-e27fb15c4e6f/zapatillas-ropa-y-accesorios-nike-para-hombre.jpg" alt="Imagen Nike" />
-            </div>
                 <ItemList items={items}/>
         </div>
     )
   }
-}
+
 
 export default ItemListContainer
