@@ -24,6 +24,7 @@ const ItemListContainer = ({prop}) => {
                 setTimeout(()=>{
                     res(ref)  //aqui resolvera ya sea productosfiltrados por categoria o todos juntos 
                 }, 2000)
+                
               })
           }
         
