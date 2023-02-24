@@ -50,9 +50,9 @@ const Navbar = () => {
       <nav className={`Cabecera-nav ${menu ? 'isActive ' : ''}`}>
             <ul className='Cabecera-ul'>
               <li className="Cabecera-li"><NavLink to="/" className="/">Inicio</NavLink></li>
-              <li className="Cabecera-li"><NavLink to="/category/hombre" className="Cabecera-a">Hombre</NavLink></li>
-              <li className="Cabecera-li"><NavLink to="/category/mujer" className="Cabecera-a">Mujer</NavLink></li>
-              <li className="Cabecera-li"><NavLink to="/category/nosotros" className="Cabecera-a">Nosotros</NavLink></li>
+              <li className="Cabecera-li"><NavLink to="/category/Hombre" className="Cabecera-a">Hombre</NavLink></li>
+              <li className="Cabecera-li"><NavLink to="/category/Mujer" className="Cabecera-a">Mujer</NavLink></li>
+              <li className="Cabecera-li"><NavLink to="/category/Nosotros" className="Cabecera-a">Nosotros</NavLink></li>
             </ul>
             <Link to='/cart'>
                 <Cart/>
