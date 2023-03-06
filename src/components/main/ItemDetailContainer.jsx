@@ -7,6 +7,7 @@ import { products } from '../../mock/products'
 const ItemDetailContainer = () => {
   const [productoPorId, setProductoPorId] = useState({})
   const {idProd} = useParams()
+  console.log(idProd)
 
   useEffect(()=>{
     const getProducts = () =>{

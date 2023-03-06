@@ -8,8 +8,14 @@
     color: black;
     //Tamaño de la vista segun el dispositivo
     @media only screen and (max-width:960px){
-        height: 120vh;
+        height: 140vh;
     }
+
+    // //esto es lo unico que le cambie
+
+    // @media only screen and (max-width: 500px){
+    //     height: 115vh
+    // }
 
 
     .imagen-detalle-contenedor{
